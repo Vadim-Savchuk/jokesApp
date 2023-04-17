@@ -24,7 +24,7 @@ function App() {
 
     return (
         <div className='wrapper'>
-            <BrowserRouter>
+            <BrowserRouter basename='/jokesApp/'>
                 <Header />
                 <Routes>
                     <Route path='/login'   element={<Login />}/>
