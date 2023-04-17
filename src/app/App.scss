@@ -1,0 +1,64 @@
+@import './Normalize.scss';
+
+html,
+body,
+#root {
+    min-height: 100%;
+}
+
+body {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    background-color: #3eaab3;
+    font-family: 'Roboto', sans-serif;
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url('./img/bg.gif');
+}
+
+.container {
+    padding: 0px 40px;
+}
+
+// Shared styles
+.button {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 22px;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.button.active {
+    color: black;
+    background-color: transparent;
+}
+
+.big-title {
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 700;
+}
+
+
+// Scroll
+* {
+    scrollbar-width: 10px;
+    scrollbar-color: white black;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+}
