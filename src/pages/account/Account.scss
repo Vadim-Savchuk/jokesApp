@@ -1,16 +1,16 @@
 .account {
     height: 88vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-top: 30px;
+    flex-direction: row-reverse;
+    justify-content: space-around;
 
     .account__desc {
-        width: 100%;
         display: flex;
-        margin: 0 auto;
         max-width: 400px;
         padding: 40px 20px;
         text-align: center;
+        height: min-content;
         border-radius: 25px;
         flex-direction: column;
         background-color: white;
@@ -28,4 +28,24 @@
 .subtitle {
     font-size: 20px;
     font-weight: 700;
+}
+
+.i-am-like {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    max-width: 500px;
+    flex-direction: column;
+
+    .card {
+        flex: none;
+        max-width: 100%;
+    }
+
+    .i-am-like__subtitle{
+        text-align: center;
+        padding: 20px 40px;
+        border-radius: 25px;
+        background-color: white;
+    }
 }

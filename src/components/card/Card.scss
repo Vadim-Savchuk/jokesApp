@@ -30,6 +30,37 @@
         flex-direction: column;
         justify-content: center;
         background-color: rgba(0, 0, 0, 0.8);
+
+        .card__text {
+            display: flex;
+            align-items: center;
+        }
+
+        .card__like  {
+            font-size:30px;
+            margin-left: 10px;
+
+            &.active {
+                color: red;
+            }
+        }
+
+        .card__add-to-selected {
+            top: 0px;
+            right: 10px;
+            color: white;
+            font-size: 40px;
+            position: absolute;
+            background: transparent;
+
+            &:hover {
+                color: rgb(34, 120, 120);
+            }
+
+            &.active {
+                color: gold;
+            }
+        }
     }
 
     &:hover .card__desc {

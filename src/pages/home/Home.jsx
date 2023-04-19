@@ -1,19 +1,21 @@
 import { useSelector } from 'react-redux';
 
-import JokesList from '../../components/jokes-list/JokesList';
-import Loader    from '../../components/loader/Loader';
+import JokesList    from '../../components/jokes-list/JokesList';
+import Loader       from '../../components/loader/Loader';
+import Info         from '../../components/info/Info';
 
 import './Home.scss';
 
 function Home() {
-    const {status, error} = useSelector(state => state.jokes);
+    const { status, error } = useSelector(state => state.jokes);
     
     return (
         <div className="container">
-            <section className='home'>
+            <div className='home'>
+                
                 {status === 'loading' ? <Loader /> : <JokesList />}
-                {error && <h1 className='big-title'>{error}</h1>}
-            </section>
+                {error && <Info text={'Сталась помилка. \n Спробуйте будь ласка пізніше.'} />}
+            </div>
         </div>
     );
 }

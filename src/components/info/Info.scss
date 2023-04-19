@@ -1,0 +1,17 @@
+.full-screen {
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-text {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 45px;
+    padding: 80px 60px;
+    border-radius: 25px;
+    background-color: white;
+}

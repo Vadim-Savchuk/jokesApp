@@ -1,6 +1,6 @@
 import { useEffect }                              from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector }               from 'react-redux';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import { fetchJokes, addAuthor } from '../store/jokesSlice';
 
@@ -20,7 +20,7 @@ function App() {
     useEffect(() => {
         dispatch(addAuthor(localStorage.getItem('author')));
         dispatch(fetchJokes())
-    }, [author]);
+    }, [author, dispatch]);
 
     return (
         <div className='wrapper'>
@@ -32,7 +32,7 @@ function App() {
                     <Route path='/add'     element={<AddJoke />} />
                     <Route path='/account' element={<Account />} />
 
-                    <Route path='/*' element={<NotFound />} />
+                    <Route path='/*'       element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
         </div> 

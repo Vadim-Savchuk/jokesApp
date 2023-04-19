@@ -8,7 +8,7 @@ import './Login.scss';
 
 function Login() {
     const [name, setName] = useState('');
-    const author = useSelector(state => state.jokes.author);
+    const author          = useSelector(state => state.jokes.author);
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
@@ -26,7 +26,7 @@ function Login() {
 
     useEffect(() => {
         if(author) return navigate('/');
-    }, []);
+    }, [author, navigate]);
 
     return (
         <div className='container'>
