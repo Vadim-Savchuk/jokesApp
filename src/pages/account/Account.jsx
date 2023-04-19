@@ -35,6 +35,8 @@ function Account() {
                                 author={joke.author}
                                 isSelected={joke.isSelected}
                                 likes={joke.likes}
+                                whoLiked={joke.whoLiked}
+
                             />
                         })
                     }
