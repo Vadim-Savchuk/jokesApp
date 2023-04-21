@@ -7,6 +7,7 @@ import './JokesList.scss';
 
 function JokesList() {
     const jokes = useSelector(state => state.jokes.jokes);
+    const reverseJokes = [...jokes].reverse();
 
     return (
         <>
@@ -16,7 +17,7 @@ function JokesList() {
 
             <ul className='jokes'>
                 {
-                    jokes.map(joke => {
+                    reverseJokes.map(joke => {
                         return (
                             <Card
                                 id={joke.id}
