@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/jokesApp/static/css/main.50e49f4b.css",
-    "main.js": "/jokesApp/static/js/main.2c9ac2f2.js",
+    "main.js": "/jokesApp/static/js/main.4b70178f.js",
     "static/media/bg.gif": "/jokesApp/static/media/bg.41ae7d20142c015ecc10.gif",
     "static/media/smile.png": "/jokesApp/static/media/smile.fb327087e1ee4550134c.png",
     "index.html": "/jokesApp/index.html",
     "main.50e49f4b.css.map": "/jokesApp/static/css/main.50e49f4b.css.map",
-    "main.2c9ac2f2.js.map": "/jokesApp/static/js/main.2c9ac2f2.js.map"
+    "main.4b70178f.js.map": "/jokesApp/static/js/main.4b70178f.js.map"
   },
   "entrypoints": [
     "static/css/main.50e49f4b.css",
-    "static/js/main.2c9ac2f2.js"
+    "static/js/main.4b70178f.js"
   ]
 }
