@@ -1,7 +1,26 @@
 .header {
+    padding: 40px;
+}
+
+.nav-list {
     gap: 10px;
     display: flex;
-    padding: 20px 40px;
     align-items: center;
     justify-content: center;
+}
+
+
+@media screen and (max-width: 590px) {
+    .header {
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        z-index: 111111;
+        position: fixed;
+        background-color: white;
+
+        .button {
+            background-color: #17a7c6;
+        }
+    }
 }

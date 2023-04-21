@@ -32,8 +32,7 @@ function Login() {
         <div className='container'>
             <div className='login'>
                 <form className='login-form' onSubmit={loginSubmit}>
-                    <label className='title login-form__title'>Авторизація</label>
-
+                    <label className='title login-form__title'>Реєстрація</label>
                     <input
                         type="text"
                         value={name}

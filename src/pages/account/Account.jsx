@@ -5,10 +5,10 @@ import Card from '../../components/card/Card';
 import './Account.scss';
 
 function Account() {
-    const author = useSelector(state => state.jokes.author);
+    const author      = useSelector(state => state.jokes.author);
     const selectJokes = useSelector(state => state.jokes.jokes);
 
-    const filtered = selectJokes.filter(joke => joke.isSelected === true)
+    const filtered = selectJokes.filter(joke => joke.isSelected === true);
 
     return (
         <div className='container'>
@@ -16,31 +16,28 @@ function Account() {
                 <div className='account__desc'>
                     <p className='subtitle'>Ім'я</p>
                     <h3 className="title account__title--margin">{author}</h3>
-                    <p className='account__joke'>Над одними жартами я сміюся, над іншими насміхаюсь.</p>
+                    <p className='account__joke'>{'Жарт повинна бути не стільки смішний, скільки дохідливій.'}</p>
                 </div>
                 <ul className='i-am-like'>
                     <li className='subtitle i-am-like__subtitle'>Вподобанні</li>
-                    {
-                        filtered.length === 0 &&
+
+                    {filtered.length === 0 &&
                         <li className='subtitle i-am-like__subtitle'>Тут покищо пусто</li>
                     }
 
-                    {
-                        filtered.map(joke => {
+                    {filtered.map(joke => {
                             return <Card
-                                key={joke.id}
                                 id={joke.id}
-                                question={joke.question}
+                                key={joke.id}
+                                likes={joke.likes}
                                 answer={joke.answer}
                                 author={joke.author}
-                                isSelected={joke.isSelected}
-                                likes={joke.likes}
+                                question={joke.question}
                                 whoLiked={joke.whoLiked}
-
+                                isSelected={joke.isSelected}
                             />
                         })
                     }
-
                 </ul>
             </div>
         </div>

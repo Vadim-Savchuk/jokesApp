@@ -1,0 +1,24 @@
+@media screen and (max-width: 768px) {
+    .home {
+        .jokes {
+            .card {
+                max-width: 48%;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .home {
+
+        .jokes {
+            flex-direction: column;
+
+            .card {
+                max-width: 100%;
+            }
+        }
+
+    }
+}

@@ -10,6 +10,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 22px;
+    position: relative;
     background-color: #3eaab3;
     font-family: 'Roboto', sans-serif;
 
@@ -17,6 +18,16 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-image: url('./img/bg.gif');
+}
+
+.wrapper {
+    padding: 40px 0px;
+}
+
+@media screen and (max-width: 590px) {
+    .wrapper {
+        padding: 40px 0px 120px;
+    }
 }
 
 .container {
@@ -29,6 +40,7 @@ body {
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 22px;
+    white-space: nowrap;
     background-color: black;
     border: 2px solid black;
 }
@@ -41,6 +53,15 @@ body {
 .big-title {
     font-size: 50px;
     line-height: 55px;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.subtitle {
+    font-size: 20px;
     font-weight: 700;
 }
 

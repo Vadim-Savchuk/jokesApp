@@ -10,12 +10,13 @@ import Home     from '../pages/home/Home';
 import AddJoke  from '../pages/add-joke/AddJoke';
 import Account  from '../pages/account/Account';
 import NotFound from '../pages/not-found/NotFound';
+import About    from '../pages/about/About';
 
 import './App.scss';
 
 function App() {
     const dispatch = useDispatch();
-    const author   = useSelector(state => state.jokes.author);
+    const author = useSelector(state => state.jokes.author);
 
     useEffect(() => {
         dispatch(addAuthor(localStorage.getItem('author')));
@@ -27,16 +28,16 @@ function App() {
             <BrowserRouter basename='/jokesApp/'>
                 <Header />
                 <Routes>
-                    <Route path='/login'   element={<Login />}/>
-                    <Route path='/'        element={author ? <Home /> : <Navigate to="/login" />} />
-                    <Route path='/add'     element={<AddJoke />} />
-                    <Route path='/account' element={<Account />} />
-
-                    <Route path='/*'       element={<NotFound />} />
+                    <Route path='/login'   element={<Login />} />
+                    <Route path='/'        element={author ? <Home />    : <Navigate to="/login"/>} />
+                    <Route path='/add'     element={author ? <AddJoke /> : <Navigate to="/login"/>} />
+                    <Route path='/about'   element={author ? <About />   : <Navigate to="/login"/>} />
+                    <Route path='/account' element={author ? <Account /> : <Navigate to="/login"/>} />
+                    <Route path='*'        element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
-        </div> 
-        
+        </div>
+
     );
 }
 

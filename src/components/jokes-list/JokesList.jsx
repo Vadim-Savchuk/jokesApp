@@ -10,8 +10,7 @@ function JokesList() {
 
     return (
         <>
-            {
-                jokes.length === 0 &&
+            {jokes.length === 0 &&
                 <NoDate />
             }
 
@@ -20,14 +19,14 @@ function JokesList() {
                     jokes.map(joke => {
                         return (
                             <Card
-                                key={joke.id}
                                 id={joke.id}
-                                question={joke.question}
-                                answer={joke.answer}
-                                author={joke.author}
-                                isSelected={joke.isSelected}
+                                key={joke.id}
                                 likes={joke.likes}
+                                author={joke.author}
+                                answer={joke.answer}
+                                question={joke.question}
                                 whoLiked={joke.whoLiked}
+                                isSelected={joke.isSelected}
                             />
                         )
                     })
